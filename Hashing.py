@@ -1,5 +1,6 @@
 # Joshua Blake-Williams
 
+
 # Used to keep track of how many times i reached 10 and was not able to insert
 # the given value. This var is used to determine the table size.
 overTen = 0
@@ -13,7 +14,6 @@ doubleHashNum = 0
 # The method used is similar to Dan Berstein's version of the multiplication method,
 # however customized from the value of 'a' in h(k) to the quadratic probing algorithm
 # implimented. 
-# Referenced from Prof. Dawes notes
 def hash0(k):
     a = 4909
     for x in k:
@@ -22,8 +22,7 @@ def hash0(k):
 
 # Hashing function h''(k) that returns the sum of each letter of the code word
 # (param provided) squared, and makes sure that it is an odd number.
-# This function was also referenced from Prof. Dawes' notes, where he suggests that
-# h''(k) be k^2, although I customized this function myself.
+
 def hash1(k):
     t = 0
     for z in k:
@@ -52,7 +51,7 @@ def qProbe(code, c1, c2, keys, size):
 
     while (i < size) and (keys[a] != None):
         i += 1
-        a = (v + c1 * i + int( c2 * i) ^ 2) % size
+        a = (v + c1*i + int(c2*i)^2) % size
 
         # If 10 inserts were tried
         if i > 10:
@@ -97,7 +96,6 @@ def dHash(code, keys, size):
 # preparing it for both quadratic probing and double hashing.
 # For this assignment, I chose to submit this one class where both experiments
 # are performed (as opposed to two separate classes). To make things simple,
-#
 # I used keys1 for Quadratic Probing and keys2 for Double Hashing.
 # Similarily, I used words1 and words2 to differenciate the two experiments' attributes.
 def main():
@@ -166,3 +164,15 @@ def main():
     
 # Run the damn thing
 main()
+
+
+
+
+
+
+
+
+
+
+
+
